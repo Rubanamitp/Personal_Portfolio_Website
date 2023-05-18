@@ -1,0 +1,600 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&family=Roboto&family=Roboto+Slab:wght@400;500;600;700;800;900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    
+    font-family: 'Oswald', sans-serif;
+    height: 100vh;
+    background-color: lightpink;
+    
+    
+    
+    
+}
+.container{
+    
+    
+    display: flex;
+    height: 100vh;
+    
+    
+}
+.sidebar{
+    
+    /* height: 100vh; */
+    background-color: lightgray;
+    color: blueviolet;
+    padding: 20px 0;
+    position: absolute;
+    transition: transform 0.3s ease-in;
+    
+}
+.sidebarGo{
+    transform: translate(-300vw,0);
+    position: absolute;
+}
+.main-content{
+    width: 80vw;
+    height: 100vh;
+    background-color: lightpink;
+    color: black;
+    margin: 10px auto;
+    padding: 20px 40px ;
+    
+}
+
+.main-content h1{
+ text-align: center;
+ font-size: 50px;
+ font-weight: bolder;
+ font-style: italic;
+ margin-bottom: 50px;
+}
+.hamburger{
+    position: absolute;
+    top: 20px;
+    left: 10px;
+    cursor: pointer;
+}
+#ham{
+    width: 30px;
+    height: 30px;
+    margin-left: 20px;
+}
+#cross{
+    width: 30px;
+    height: 30px;
+    top: 40px;
+    margin-left: 140px;
+}
+
+#span{
+    color: red;
+}
+.navbar{
+    margin: 10px 40px;
+    padding: 10px 0;
+   
+    
+}
+.navbar ul{
+    display: block;
+    text-decoration-style: none;
+}
+.navbar ul li{
+    font-size: 30px;
+    font-weight: bolder;
+    margin: 40px 0;
+    padding: 10px 0;
+    list-style: none;
+
+    
+    
+}
+.navbar ul li a:hover{
+    color:black;
+    
+}
+.navbar ul li a{
+    text-decoration: none;
+    position: relative;
+    
+
+    
+}
+.navbar ul li a::after{
+    
+    content: "";
+    position: absolute;
+    bottom: -6px;
+    left: 0;
+    width: 0%;
+    border-bottom: 4px solid red;
+    transition: 0.3s ease-in-out;
+
+}
+.navbar ul li a:hover::after{
+    width: 100%;
+}
+
+
+.infoDetails h2{
+    font-size: 40px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+.infoDetails p{
+    font-size:30px ;
+    font-weight: bold;
+}
+.buttons{
+    margin-top: 30px;
+}
+.buttons button{
+    display: inline-block;
+    margin: 10px 20px;
+    padding: 10px 20px;
+    font-size: 20px;
+    font-weight: bold;
+    
+    background-color: bisque;
+    color: black;
+    border-radius: 30px;
+    cursor: pointer;
+}
+.buttons button:hover{
+    background-color: lightblue;
+    color: darkblue;
+    border: 2px solid black;
+}
+#userpic{
+    width: 250px;
+    height: 300px;
+    margin: 20px 40px;
+    position: absolute;
+    top: 120px;
+    right: 5vw;
+    border-radius:30px ;
+}
+
+/* --About Section-- */
+#pic2{
+    width: 350px;
+    height: 400px;
+    margin: 10px 40px;
+    border-radius: 20px;
+}
+.infoContainer2{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    
+}
+
+
+.item{
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    box-shadow: 0.2rem 1rem 0.4rem 0rem rgba(0, 0, 0, 0.3);
+    gap: 40px;
+    padding: 10px 40px;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+.item h1{
+    font-size: 40px;
+}
+.item p{
+    font-size: 24px;
+    font-weight: bold;
+}
+.iconOpen i,
+.iconClose i{
+    cursor: pointer;
+    font-size: 24px;
+}
+.hidden{
+    grid-column: 2/3;
+    display: none;
+}
+.hidden ul li{
+    font-size: 20px;
+    font-weight: bold;
+    font-style: italic;
+    padding: 8px 4px;
+}
+.active .hidden{
+    display: block;
+}
+.active{
+    position: relative;
+}
+.active::after{
+    content: "";
+    border-top: 4px solid red;
+    top: 0;
+    left: 0;
+    width: 0%;
+    position: absolute;
+    animation:bordertop 1s linear forwards;
+}
+@keyframes bordertop{
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 100%;
+    }
+}
+
+/* --Contacts Section-- */
+#Email{
+    display: inline-block;
+    width: 400px;
+    border-radius: 30px;
+    padding: 6px 10px;
+    font-size: 24px;
+    font-weight: bold;
+    
+}
+#Password{
+     display: inline-block;
+     width: 400px;
+     border-radius: 30px;
+     padding: 6px 10px;
+     font-size: 24px;
+     font-weight: bold;
+                                                                                    
+}
+#Phoneno{
+   display: inline-block;
+   width: 400px;
+   border-radius: 30px;
+   padding: 6px 10px;
+   font-size: 24px;
+   font-weight: bold;
+   
+}
+.form div{
+    
+    margin: 18px 0;
+    
+}
+.form-font{
+    margin: 10px 0;
+    font-size: 26px;
+    font-weight: bold;
+}
+#emailHelp{
+    font-size: 22px;
+    color: blue;
+}
+#checkBox{
+    width: 34px;
+    height: 26px;
+    
+}
+#check{
+    font-size: 26px;
+    font-weight: bold;
+}
+.btn{
+    background-color: bisque;
+    color: black;
+    padding: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 20px;
+    margin: 8px 0;
+}
+.btn:hover{
+    background-color: lightblue;
+    color: blue;
+    border: 2px solid black;
+}
+/* --Portfolio Section-- */
+.blogContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 20px ;
+    
+    
+}
+.blogItems{
+   display: inline-block;
+   box-shadow: 0.2rem 1rem 0.5rem 0.4rem rgba(0, 0, 0, 0.3);
+   margin: 20px auto;
+   padding: 20px 20px;
+   
+   border-radius: 30px;
+   width: 50%;
+   
+}
+.blogItems h2{
+    font-size: 2rem;
+    font-weight: bold;
+    padding: 10px 20px;
+    
+    color:blueviolet;
+    
+    
+}
+#gifpic{
+    width:100px;
+    height: 100px;
+    display: none;
+}
+#spanTime{
+    cursor: pointer;
+    display: none;
+}
+#plusSign{
+    display: none;
+}
+#time{
+    display: none;
+}
+.span{
+    color:darkred ;
+    
+}
+.span1{
+    padding: 8px 84px;
+    color: darkred;
+}
+.span2{
+    padding: 8px 74px;
+    color: darkred;
+}
+.span3{
+    padding: 8px 100px;
+    color: darkred;
+}
+
+#picmob{
+    width: 50px;
+    height: 50px;
+    display: none;
+    
+}
+#picmob2{
+    width: 50px;
+    height: 50px;
+    display: none;
+    
+}
+
+.blogItems p{
+    font-size: 1.5rem;
+   
+    
+}
+#blog{
+    font-size: 3rem;
+    font-weight: bolder;
+    color: rgb(90, 11, 11);
+    
+}
+#blog:hover{
+    color:red;
+    
+}
+.btn-primary{
+    display: inline-block;
+    padding: 0 10px;
+}
+
+/* --Services Section-- */
+.infoContainer3{
+    
+    width: 100%;
+    display: flex;
+    
+    
+}
+#workpic1{
+    width: 150px;
+    height: 150px;
+    border-radius: 40px;
+}
+#workpic2{
+    width: 150px;
+    height: 150px;
+    border-radius: 40px;
+}
+#workpic3{
+    width: 150px;
+    height: 150px;
+    border-radius: 40px;
+}
+.servicesList{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    margin: 8px auto;
+}
+
+
+#services{
+    
+    margin-top: 50px;
+    text-align: center;
+}
+.content{
+    display: flex;
+    width: 100%;
+    height: 200px;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0rem 1rem 0.5rem 0.2rem rgba(0, 0, 0, 0.3);
+    gap: 10px;
+    margin: 20px 60px;
+    padding: 10px 26px;
+    border-radius: 30px;
+    background-color: bisque;
+    margin-bottom: 30px;
+    
+}
+.content h2{
+    font-size: 30px;
+    font-weight: bolder;
+}
+.content p{
+    font-size: 26px;
+    font-weight: bold;
+    margin: 0 8px;
+}
+@media (max-width:1064px){
+    body,.main-content{
+        background-color: lightblue;
+    }
+    #userpic{
+        display: none;
+    }
+    #portfolioHeader{
+        padding: 0 30px;
+        margin-right: 30px;
+    }
+}
+@media (max-width:450px){
+   
+    infoContainer2{
+        display: flex;
+        
+        
+        justify-content: center;
+        align-items: center;
+        margin-right: 40px;
+    }
+    .item{
+        display: flex;
+        flex-wrap: wrap;
+        width: 200px;
+        margin-right: 50px;
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+}
+@media (max-width:856px){
+    .formContainer{
+        width: 70vw;
+        display: flex;
+        flex-wrap: wrap;
+        
+        margin: 10px auto;
+        padding: 16px;
+    }
+    #Email{
+        
+        display: inline-block;
+        width: 40vw;
+        
+        margin:0 20px;
+        
+    }
+    #Password{
+        
+        display: inline-block;
+        width: 40vw;
+        
+        margin:0 20px;
+        
+    }
+    #Phoneno{
+        
+        display: inline-block;
+        width: 40vw;
+        
+        margin:0 20px;
+        
+    }
+}
+@media (max-width:490px){
+   
+    .blogContainer{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .blogItems{
+        display: block;
+        width: 200px;
+        margin: 40px auto;
+    }
+    #time{
+        display: inline-block;
+        height: 20vh;
+        margin-bottom: 50px;
+    }
+}
+@media (max-width:610px){
+    .infoContainer3{
+    
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        
+        
+    }
+    .content{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        width: 160px;
+        height: 400px;
+        justify-content: center;
+        align-items: center;
+        
+        gap: 10px;
+        margin: 20px 60px;
+        padding: 10px 26px;
+        border-radius: 30px;
+        background-color: bisque;
+        margin-bottom: 30px;
+        
+    }
+    .content p{
+        display: flex;
+        flex-wrap: wrap;
+        margin: 4px 10px;
+    }
+    #workpic1,#workpic2,#workpic3{
+        width: 100px;
+        height: 100px;
+        border-radius: 40px;
+    }
+    #services{
+        text-align: center;
+       
+        margin: 0 20px;
+        padding: 0 10px;
+    }
+}
+@media (min-width:700px){
+    #time{
+        background-color: bisque;
+        color: black;
+        padding: 4px 28px;
+        border: 3px solid red;
+        border-radius: 30px;
+        font-size: 30px;
+        display: block;
+        
+    }
+    
+    .plusSign.active{
+        display: inline-block;
+    }
+    #spanTime{
+        display: inline-block;
+    }
+}
+
+

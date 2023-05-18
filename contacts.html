@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ruban Pati-Portfolio Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar sidebarGo">
+           
+            <nav class="navbar">
+              <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="about.html">About Me</a></li>
+                <li><a href="portfolio.html">Portfolio Blog</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contacts.html">Contact Me</a></li>
+            </ul>
+            </nav>
+        </div> 
+        <div class="main-content">
+          <div class="hamburger">
+            <img src="images/ham.png" id="ham">
+            <img src="images/cross.png" id="cross">
+        </div>
+            <h1>Contact Information for general Enquiry</h1>
+            <div class="infoContainer formContainer">
+                <form class="form">
+                    <div class="mb-3">
+                      <label for="Email" class="form-label form-font">Email address:</label>
+                      <input type="email" class="form-control" id="Email" aria-describedby="emailHelp">
+                      <div id="emailHelp" class="form-text">We'll never share your phoneno and password with anyone else.</div>
+                    </div>
+                    <div class="mb-3">
+                      <label for="Password" class="form-label form-font">Password:</label>
+                      <input type="password" class="form-control" id="Password">
+                    </div>
+                    <div class="mb-3">
+                      <label for="Phoneno" class="form-label form-font">Phoneno:</label>
+                      <input type="password" class="form-control" id="Phoneno">
+                    </div>
+                    <div class="mb-3 form-check">
+                      <input type="checkbox" class="form-check-input form-font" id="checkBox">
+                      <label class="form-check-label" for="exampleCheck1" id="check">Check me out</label>
+                    </div>
+                    <button type="submit" class="btn btn-secondary">Submit</button>
+                  </form>
+                 
+                    <div class="footer">
+                        <footer>
+                            <i class="fa-brands fa-linkedin"></i>
+                        </footer>
+                    </div>
+            </div>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
